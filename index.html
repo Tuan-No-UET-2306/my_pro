@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Công Tuấn - AI Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e293b;
+            --accent-color: #38bdf8;
+            --bg-color: #f8fafc;
+            --text-color: #334155;
+            --header-text: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #0f172a 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--header-text);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(to right, #eff6ff, #ffffff);
+            border-right: 4px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li::before {
+            content: "▹";
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .contact-footer {
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Trần Công Tuấn</h1>
+    <p>Sinh viên Ngành Trí tuệ Nhân tạo | Đại học Công nghệ - ĐHQGHN (VNU-UET)</p>
+</header>
+
+<div class="container">
+    
+    <section id="intro">
+        <h2>Giới thiệu bản thân</h2>
+        <p>Tôi là sinh viên năm 2 chuyên ngành Trí tuệ Nhân tạo tại trường Đại học Công nghệ (UET). Với niềm đam mê mãnh liệt trong việc giải quyết các bài toán thực tế bằng công nghệ, tôi luôn không ngừng học hỏi và thử thách bản thân qua các dự án kỹ thuật phức tạp.</p>
+        <div class="highlight-box">
+            <strong>Thành tích học tập nổi bật:</strong> GPA <strong>3.77/4.0</strong> | Đạt điểm <strong>A+</strong> cho tất cả các môn Toán đại cương tại UET, tạo nền tảng tư duy logic vững chắc cho con đường AI.
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Kiến thức & Kỹ năng</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Nền tảng AI & Math</h3>
+                <ul class="skill-list">
+                    <li>Học máy (Machine Learning) cơ bản</li>
+                    <li>Giải tích, Đại số tuyến tính, Xác suất thống kê (A+)</li>
+                    <li>Xử lý dữ liệu với Spark, Kafka</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Phát triển Phần mềm</h3>
+                <ul class="skill-list">
+                    <li>Backend: FastAPI, PostgreSQL</li>
+                    <li>Frontend: Next.js</li>
+                    <li>Công cụ: Airflow, Docker, Kubernetes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Dự án tiêu biểu</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Hệ thống LPR Real-time</h3>
+                <p>Phát triển hệ thống nhận diện biển số xe thời gian thực sử dụng FastAPI và Next.js, lưu trữ dữ liệu trên PostgreSQL.</p>
+                <div style="margin-top:15px;">
+                    <span class="badge">Computer Vision</span>
+                    <span class="badge">Fullstack</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Phân tích dữ liệu NYC Taxi</h3>
+                <p>Xây dựng dashboard phân tích dữ liệu chuyến đi "Yellow Taxi" của New York City năm 2020 để tìm ra các quy luật di chuyển.</p>
+                <div style="margin-top:15px;">
+                    <span class="badge">Data Engineering</span>
+                    <span class="badge">Analytics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="orientation">
+        <h2>Định hướng Nghiên cứu & Sự nghiệp</h2>
+        <p>Mục tiêu của tôi là trở thành một chuyên gia trong lĩnh vực AI với hai trọng tâm chính:</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Computer Vision (Thị giác máy tính)</h3>
+                <p>Đi sâu nghiên cứu các thuật toán nhận diện, phân tách hình ảnh và ứng dụng chúng vào các hệ thống tự động hóa thông minh.</p>
+            </div>
+            <div class="card">
+                <h3>AI Agents (Tác tử thông minh)</h3>
+                <p>Xây dựng các hệ thống AI có khả năng tự vận hành, đưa ra quyết định và tương tác linh hoạt trong các môi trường phức tạp.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="personal">
+        <h2>Sở thích & Phong cách sống</h2>
+        <p>Bên cạnh việc code, tôi còn là một người yêu thích sự tự do và sáng tạo qua việc trượt ván (skateboarding) và thưởng thức hương vị cà phê phin truyền thống. Những sở thích này giúp tôi duy trì sự cân bằng và cảm hứng trong học tập.</p>
+    </section>
+
+</div>
+
+<div class="contact-footer">
+    <p>&copy; 2026 Trần Công Tuấn. Thiết kế dựa trên định hướng Portfolio AI chuyên nghiệp.</p>
+</div>
+
+</body>
+</html>
